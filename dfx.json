@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "nikhil_backend": {
+      "main": "src/nikhil_backend/main.mo",
+      "type": "motoko"
+    },
+    "nikhil_frontend": {
+      "dependencies": [
+        "nikhil_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/nikhil_frontend/src/index.html"
+      },
+      "source": [
+        "src/nikhil_frontend/assets",
+        "dist/nikhil_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
